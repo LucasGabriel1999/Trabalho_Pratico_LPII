@@ -21,7 +21,7 @@ public class Main {
 //    Listas
     public static ArrayList<Aluno> alunos = new ArrayList<>();
     public static ArrayList<Funcionario> funcionarios = new ArrayList<>();
-    public static ArrayList<Professor> professors = new ArrayList<>();
+    public static ArrayList<Professor> professores = new ArrayList<>();
     public static ArrayList<Exemplar> exemplares = new ArrayList<>();
 
     public static void main(String[] args) {
