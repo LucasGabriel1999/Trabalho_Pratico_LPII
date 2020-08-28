@@ -1,14 +1,17 @@
 package com.company;
 
-public class Funcionario extends Pessoa {
-//    atributos
+import java.util.ArrayList;
+
+public class Funcionario extends Pessoa implements HorarioDeTrabalho{
     private String funcao;
     private double salarioFuncionario;
     private int cargaHoraria;
+    
+    private ArrayList<Emprestimo> listaEmprestimos;
 
-//    construtores
     public Funcionario(){
         super();
+        this.listaEmprestimos= new ArrayList<>();
     }
 
     public Funcionario(String funcao, double salarioFuncionario, int cargaHoraria) {
@@ -24,8 +27,20 @@ public class Funcionario extends Pessoa {
         this.cargaHoraria = cargaHoraria;
     }
 
-//    Get and Set
+    @Override
+    public void definirHorario(){//Define Horario de trabalho do funcionario a partir da interface
+        this.cargaHoraria = getCargaHoraria();
+    }
 
+    public ArrayList<Emprestimo> getListaEmprestimos() {
+        return listaEmprestimos;
+    }
+
+    public void setListaEmprestimos(ArrayList<Emprestimo> listaEmprestimos) {
+        this.listaEmprestimos = listaEmprestimos;
+    }
+    
+    
     public String getFuncao() {
         return funcao;
     }
@@ -50,8 +65,5 @@ public class Funcionario extends Pessoa {
         this.cargaHoraria = cargaHoraria;
     }
 
-//    Metodos
-    public void definirHorario(){//Define Horario de trabalho do funcionario a partir da interface
-        this.cargaHoraria = getCargaHoraria();
-    }
+  
 }

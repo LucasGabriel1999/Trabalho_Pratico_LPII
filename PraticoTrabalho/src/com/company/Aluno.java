@@ -21,8 +21,6 @@ public class Aluno extends Pessoa {
         this.curso = curso;
     }
 
-//    Get and Set
-
     public String getMatricula() {
         return matricula;
     }
