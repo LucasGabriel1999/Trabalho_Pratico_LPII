@@ -28,19 +28,10 @@ public class Funcionario extends Pessoa implements HorarioDeTrabalho{
     }
 
     @Override
-    public void definirHorario(){//Define Horario de trabalho do funcionario a partir da interface
-        this.cargaHoraria = getCargaHoraria();
+    public void definirHorario(int horario){//Define Horario de trabalho do funcionario a partir da interface
+        this.cargaHoraria = horario;
     }
-
-    public ArrayList<Emprestimo> getListaEmprestimos() {
-        return listaEmprestimos;
-    }
-
-    public void setListaEmprestimos(ArrayList<Emprestimo> listaEmprestimos) {
-        this.listaEmprestimos = listaEmprestimos;
-    }
-    
-    
+     
     public String getFuncao() {
         return funcao;
     }
@@ -65,5 +56,9 @@ public class Funcionario extends Pessoa implements HorarioDeTrabalho{
         this.cargaHoraria = cargaHoraria;
     }
 
+    @Override
+    public String toString() {
+        return "Funcionario{" + "funcao=" + funcao + ", salarioFuncionario=" + salarioFuncionario + ", cargaHoraria=" + cargaHoraria + ", listaEmprestimos=" + listaEmprestimos + '}';
+    }
   
 }

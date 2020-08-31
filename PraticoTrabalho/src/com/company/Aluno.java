@@ -1,12 +1,14 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Aluno extends Pessoa {
 //    atributos
+
     private String matricula;
     private String curso;
 
-//    construtores
-    public Aluno(){
+    public Aluno() {
         super();
     }
 
@@ -36,4 +38,7 @@ public class Aluno extends Pessoa {
     public void setCurso(String curso) {
         this.curso = curso;
     }
+    
+    
+    
 }

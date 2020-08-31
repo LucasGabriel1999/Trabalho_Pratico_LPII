@@ -1,5 +1,5 @@
 package com.company;
 
 public interface HorarioDeTrabalho {
-    public void definirHorario();
+    public void definirHorario(int horario);
 }

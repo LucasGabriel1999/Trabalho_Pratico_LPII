@@ -7,11 +7,66 @@ public abstract class Pessoa {
     private String nome;
     private int idade;
     private String CPF;
-
     private ArrayList<Emprestimo> listaEmprestimos;
 
+
+
     public Pessoa() {
-        this.listaEmprestimos = new ArrayList<>();
+       this.listaEmprestimos = new ArrayList<>();
+    }
+    
+     public void addEmprestimo(Emprestimo emprestimo) {
+        this.listaEmprestimos.add((emprestimo));
+    }
+
+    public Emprestimo excluiEmprestimo(Emprestimo emprestimo) {
+        Emprestimo emprestimoExcluido = null;
+        String cpfAtual;
+        String cpfParaExcluir = emprestimo.getPessoaSolicitante().getCPF();
+        int indiceLista;
+
+        for (Emprestimo emp : this.listaEmprestimos) {
+            cpfAtual = emp.getPessoaSolicitante().getCPF();
+            indiceLista = this.listaEmprestimos.indexOf(emp);
+
+            if (cpfAtual.equals(cpfParaExcluir)) {
+                emprestimoExcluido = this.listaEmprestimos.remove(indiceLista);
+            }
+        }
+
+        return emprestimoExcluido;
+    }
+
+    public Emprestimo consultaEmprestimo(Emprestimo emprestimo) {
+        String cpfAtual;
+        String cpfParaConsulta = emprestimo.getPessoaSolicitante().getCPF();
+
+        for (Emprestimo emp : this.listaEmprestimos) {
+
+            cpfAtual = emp.getPessoaSolicitante().getCPF();
+
+            if (cpfAtual.equals(cpfParaConsulta)) {
+                return emp;
+            }
+        }
+        
+        return null;
+    }
+    
+    public boolean atualizaEmprestimo(String cpf, Emprestimo emprestimoAtualizado){
+        String cpfAtual;
+        int indiceLista;
+
+        for (Emprestimo emp : this.listaEmprestimos) {
+            cpfAtual = emp.getPessoaSolicitante().getCPF();
+            indiceLista = this.listaEmprestimos.indexOf(emp);
+
+            if (cpfAtual.equals(cpf)) {
+                this.listaEmprestimos.set(indiceLista, emprestimoAtualizado);
+                return true;
+            }
+        }
+        return false;
     }
 
     public Pessoa(String nome, int idade, String CPF) {
@@ -57,5 +112,12 @@ public abstract class Pessoa {
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", idade=" + idade + ", CPF=" + CPF + ", listaEmprestimos=" + listaEmprestimos + '}';
+    }
+    
+    
 
 }
