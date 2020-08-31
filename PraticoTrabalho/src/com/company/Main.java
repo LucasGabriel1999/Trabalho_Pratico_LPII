@@ -10,7 +10,7 @@
 *
 * ---------*---------*---------*---------*---------*---------*---------*-------
 * --------- Sistema para Controle de Empréstimos de Livros e Revistas ---------
-* ---------*---------*---------*---------*---------*---------*---------*-------
+* ---------*---------*---------* ---------*---------*---------*---------*-------
 * */
 package com.company;
 
@@ -42,6 +42,8 @@ public class Main {
             System.out.println("6 - Mostar lista de Exemplares\n");
             System.out.println("7 - Remover uma Pessoa\n");
             System.out.println("8 - Remover um Exemplar\n");
+            System.out.println("9 - Atualizar dados de uma pessoa\n");
+            System.out.println("10 - Atualizar dados de um exemplar\n");
             System.out.println("0 - Encerrar\n");
             op = scanner.nextInt();
             
@@ -98,6 +100,15 @@ public class Main {
                 case 8: {
                     controller.exclusaoExemplar();
                     break;
+                }
+                
+                case 9:{
+                    controller.atualizaPessoa();
+                    break;
+                }
+                
+                case 10:{
+                    controller.atualizaPessoa();
                 }
             }
         }

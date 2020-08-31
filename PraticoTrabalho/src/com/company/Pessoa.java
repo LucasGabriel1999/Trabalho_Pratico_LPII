@@ -76,7 +76,6 @@ public abstract class Pessoa {
         this.listaEmprestimos = new ArrayList<>();
     }
 
-    //falta implementar
     public void bemVindo() {
         System.out.println("Bem vindo " + this.nome);
     }

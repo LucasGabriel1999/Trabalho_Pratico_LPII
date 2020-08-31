@@ -11,8 +11,11 @@ public class Emprestimo implements IEmprestimo {
     private ArrayList<Exemplar> listaExemplares;
     private GregorianCalendar dataDeDevolucao;
     private int qtdDeLivrosPorEmprestimo = 0;
+    
+    int i = 0;
 
     public Emprestimo() {
+        this.dataDeDevolucao = new GregorianCalendar();
         this.listaExemplares = new ArrayList<>();
         this.funcinarioEncarregado = new Funcionario();
         this.definirDataDeDevolucao();
@@ -96,5 +99,4 @@ public class Emprestimo implements IEmprestimo {
     public void setListaExemplares(ArrayList<Exemplar> listaExemplares) {
         this.listaExemplares = listaExemplares;
     }
-
 }

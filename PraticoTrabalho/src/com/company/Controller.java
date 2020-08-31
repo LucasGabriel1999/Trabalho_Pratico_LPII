@@ -180,4 +180,48 @@ public class Controller {
             }
         }
     }
+    
+    public void atualizaPessoa (){
+        String cpf; 
+        
+        System.out.println("\n*** Atualizar dados de uma pessoa da lista ***");
+        System.out.println("\n Informe o CPF da pessoa que deseja atualizar na lista: "); cpf = scanner.next();
+        
+        for ( i = 0; i < this.listaPessoas.size(); i++) {
+            if(this.listaPessoas.get(i).getCPF().equals(cpf)){
+                System.out.println("Informe o nome para atualizar ou digite o atual:\n");
+                this.listaPessoas.get(i).setNome(scanner.next());
+                
+                System.out.println("Informe o CPF para atualizar ou digite o atual:\n");
+                this.listaPessoas.get(i).setCPF(scanner.next());
+                
+                System.out.println("Informe a idade para atualizar ou digite a atual:\n");
+                this.listaPessoas.get(i).setIdade(scanner.nextInt());
+                
+                System.out.println("\nAtualização cocluida!\n");
+            }
+        }
+    }
+    
+    public void atualizaExemplar (){
+        String isbn; 
+        
+        System.out.println("\n*** Atualizar dados de uma pessoa da lista ***");
+        System.out.println("\n Informe o CPF da pessoa que deseja atualizar na lista: "); isbn = scanner.next();
+        
+        for ( i = 0; i < this.listaExemplar.size(); i++) {
+            if(this.listaExemplar.get(i).getISBN().equals(isbn)){
+                System.out.println("Informe o nome para atualizar ou digite o atual:\n");
+                this.listaExemplar.get(i).setNome(scanner.next());
+                
+                System.out.println("Informe o ISBN para atualizar ou digite o atual:\n");
+                this.listaExemplar.get(i).setISBN(scanner.next());
+                
+                System.out.println("Informe o codigo para atualizar ou digite o atual:\n");
+                this.listaExemplar.get(i).setCod(scanner.nextInt());
+                
+                System.out.println("\nAtualização cocluida!\n");
+            }
+        }
+    }
 }
