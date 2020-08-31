@@ -39,30 +39,30 @@ public class Main {
             op = scanner.nextInt();
             
             switch(op){
-                case 1:{
-
-                    System.out.println("---Olá, que bom que deseja se cadastrar!---\n");
-                    System.out.println("Para se cadstarar nas classes escolha uma letra referente a classe desejada:");
-                    System.out.println("[A] => Aluno\n[E] => Exemplar\n[F] => Funcionario\n[P] => Professor");
-                    opcao = scanner.next();
-                    opcao = opcao.toUpperCase();
-                    
-                    controller.novoCadastro(opcao);
-                    
-                    break;
-                }
-                
-                case 2:{
-                    
-                    System.out.println("---Olá, vamos excluir!---\n");
-                    System.out.println("Para excluir nas classes escolha uma letra referente a classe desejada:");
-                    System.out.println("[A] => Aluno\n[E] => Exemplar\n[F] => Funcionario\n[P] => Professor");
-                    opcao = scanner.next();
-                    opcao = opcao.toUpperCase();
-                    
-                    controller.excluiNaLista(opcao);
-                    break;
-                }
+//                case 1:{
+//
+//                    System.out.println("---Olá, que bom que deseja se cadastrar!---\n");
+//                    System.out.println("Para se cadstarar nas classes escolha uma letra referente a classe desejada:");
+//                    System.out.println("[A] => Aluno\n[E] => Exemplar\n[F] => Funcionario\n[P] => Professor");
+//                    opcao = scanner.next();
+//                    opcao = opcao.toUpperCase();
+//                    
+//                    
+//                    
+//                    break;
+//                }
+//                
+//                case 2:{
+//                    
+//                    System.out.println("---Olá, vamos excluir!---\n");
+//                    System.out.println("Para excluir nas classes escolha uma letra referente a classe desejada:");
+//                    System.out.println("[A] => Aluno\n[E] => Exemplar\n[F] => Funcionario\n[P] => Professor");
+//                    opcao = scanner.next();
+//                    opcao = opcao.toUpperCase();
+//                    
+//                    
+//                    break;
+//                }
             }
         }
 
